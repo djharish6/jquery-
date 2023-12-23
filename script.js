@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('#testBtn').click(function(){
        // alert('hello');
-       $('.box').hide();
+       $('.box').fadeToggle(9000);
     });
     $('.box').mouseenter(function(){
         $(this).css({"background-color": "black"});
@@ -9,5 +9,11 @@ $(document).ready(function(){
     )
     $('.box').mouseleave(function(){
         $(this).css({"background-color": "red"});
+    })
+    $("#name").blur(function(){
+       var userinput = $(this).var();
+       if(userinput.length < 3){
+           $('.error').show()
+       }
     })
 });
